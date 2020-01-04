@@ -1,0 +1,7 @@
+.Cookie--base .Cookie__button {
+  @apply text-black bg-bread-secondary rounded-full !important;
+}
+
+.Cookie--base {
+  @apply bg-gray-900 text-white !important;
+}

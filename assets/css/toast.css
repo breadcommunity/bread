@@ -1,0 +1,11 @@
+.toasted.toasted-primary {
+  @apply px-4 py-2 shadow-lg rounded-lg font-body !important;
+}
+
+.toasted.toasted-primary.error {
+  @apply bg-red-500 !important;
+}
+
+.toasted.toasted-primary.success {
+  @apply bg-bread-primary text-gray-800 font-medium !important;
+}
