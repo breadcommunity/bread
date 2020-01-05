@@ -7,7 +7,7 @@
       <div>
         <ul class="flex items-center">
           <nuxt-link v-if="loggedIn" to="/">
-            <Button class="text-sm py-2">Write a Post</Button>
+            <Button class="mr-4">Write a Post</Button>
           </nuxt-link>
           <template v-if="loggedIn" class="sm:hidden">
             <li>
