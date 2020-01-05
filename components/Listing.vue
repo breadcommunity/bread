@@ -12,12 +12,12 @@
           <HeartIcon size="1.25x" />
           {{ post.likes }}
         </div>
-        <nuxt-link to="/post">
+        <nuxt-link :to="`/post?id=${post.id}`">
           <p class="font-medium text-lg">
             {{ post.title }}
           </p>
           <p class="block text-gray-600 text-sm">
-            {{ post.preview }}
+            {{ post.content }}
           </p>
           <div class="inline-flex items-center mt-1">
             <span
@@ -39,14 +39,15 @@
 
 <script>
 import { HeartIcon } from 'vue-feather-icons'
+
 export default {
   components: {
     HeartIcon
   },
   props: {
     posts: {
-      type: Object,
-      default: null
+      type: Array,
+      default: () => []
     }
   }
 }
