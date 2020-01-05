@@ -49,9 +49,9 @@
           <nuxt-link to="/signup" class="underline"
             >Forgotten your password?</nuxt-link
           >
-          <span class="block">OR</span>
+          <span class="block my-2">OR</span>
           <nuxt-link to="/signup" class="underline font-medium"
-            >Sign up here</nuxt-link
+            ><Button variant="secondary">Sign up here</Button></nuxt-link
           >
         </p>
       </div>

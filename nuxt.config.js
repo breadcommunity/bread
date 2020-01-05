@@ -83,6 +83,12 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  /**
+   * purgeCSS
+   */
+  purgeCSS: {
+    whitelistPatterns: [/vts-modal/, /fade/, /slide/, /Cookie/]
+  },
   /*
    ** Build configuration
    */

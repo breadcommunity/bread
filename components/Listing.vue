@@ -20,16 +20,7 @@
             {{ post.content }}
           </p>
           <div class="inline-flex items-center mt-1">
-            <span
-              class="text-xs font-medium inline-block py-1 px-2 rounded text-pink-600 bg-pink-200 last:mr-0 mr-1"
-            >
-              Ask Bread
-            </span>
-            <span
-              class="text-xs font-medium inline-block py-1 px-2 rounded text-orange-600 bg-orange-200 last:mr-0 mr-1"
-            >
-              Meta
-            </span>
+            <Tag v-for="tag in post.tags" :label="tag" />
           </div>
         </nuxt-link>
       </li>
@@ -39,10 +30,12 @@
 
 <script>
 import { HeartIcon } from 'vue-feather-icons'
+import Tag from '@/components/Tag'
 
 export default {
   components: {
-    HeartIcon
+    HeartIcon,
+    Tag
   },
   props: {
     posts: {

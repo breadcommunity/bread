@@ -35,6 +35,10 @@ export default {
   @apply bg-bread-secondary text-bread-secondary-dark;
 }
 
+.button-secondary-light {
+  @apply bg-bread-secondary-light;
+}
+
 .button-large {
   @apply py-3;
 }

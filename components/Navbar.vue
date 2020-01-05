@@ -4,17 +4,12 @@
       <nuxt-link to="/">
         <Logo />
       </nuxt-link>
-      <button @click="menu = !menu" class="sm:hidden">
-        <MenuIcon />
-      </button>
-      <div class="hidden sm:block">
+      <div>
         <ul class="flex items-center">
-          <template v-if="loggedIn">
-            <li class="desktop-menu-item">
-              <nuxt-link to="/">
-                <Button>Write a Post</Button>
-              </nuxt-link>
-            </li>
+          <nuxt-link v-if="loggedIn" to="/">
+            <Button class="text-sm py-2">Write a Post</Button>
+          </nuxt-link>
+          <template v-if="loggedIn" class="sm:hidden">
             <li>
               <img
                 class="w-10 h-10 rounded-full"
@@ -24,12 +19,9 @@
           </template>
           <template v-else>
             <li class="desktop-menu-item">
-              <nuxt-link to="/signup">
-                <Button variant="primary" class="w-full">Sign Up</Button>
+              <nuxt-link to="/login">
+                <Button variant="primary">Log In</Button>
               </nuxt-link>
-            </li>
-            <li class="desktop-menu-item">
-              <nuxt-link to="/login">Login</nuxt-link>
             </li>
           </template>
         </ul>
@@ -37,7 +29,7 @@
     </div>
     <VModal v-model="menu" bg-transition="fade">
       <button @click="menu = false" class="close">
-        <XIcon size="1.25x" />
+        <XIcon size="1.5x" />
       </button>
       <nav class="mt-4">
         <ul>
@@ -59,14 +51,13 @@
 
 <script>
 import { VModal } from 'vuetensils'
-import { MenuIcon, XIcon } from 'vue-feather-icons'
+import { XIcon } from 'vue-feather-icons'
 import Logo from '@/components/Logo'
 import Button from '@/components/Button'
 
 export default {
   components: {
     Logo,
-    MenuIcon,
     VModal,
     XIcon,
     Button
@@ -88,7 +79,7 @@ export default {
 .slide-up-enter-active,
 .slide-up-leave-active {
   transform: translateY(0);
-  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 .slide-up-enter,
@@ -102,8 +93,8 @@ export default {
 }
 
 .vts-modal__content {
-  transition: transform 0.3s;
-  @apply relative max-w-sm p-4 w-4/5 rounded-lg;
+  transition: transform 0.2s;
+  @apply relative p-4 w-4/5 rounded-lg;
 }
 
 .fade-enter .vts-modal__content,

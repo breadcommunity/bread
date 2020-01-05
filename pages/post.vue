@@ -1,27 +1,28 @@
 <template>
-  <main class="container mx-auto p-4 flex">
-    <div class="w-2/3 pr-4">
+  <main class="container mx-auto p-4 flex flex-col sm:flex-row">
+    <div class="w-full sm:w-2/3 sm:pr-4">
       <article class="bg-white p-4 rounded-lg">
         <header>
-          <h1 class="text-2xl font-bold">{{ post && post.title }}</h1>
+          <div class="flex mb-4">
+            <div class="pr-4">
+              <img
+                class="w-10 h-10 rounded-full"
+                src="https://jessesibley.com/assets/static/memoji.bd6740a.b798404f3509569fa21b6787c936804b.jpg"
+              />
+            </div>
+            <div class="leading-tight">
+              <h2 class="font-medium">Jesse Sibley</h2>
+              <p class="text-sm text-gray-600">Web Developer</p>
+            </div>
+          </div>
+          <h1 class="text-3xl font-bold leading-tight mb-4">
+            {{ post && post.title }}
+          </h1>
           <p>{{ post && post.content }}</p>
         </header>
       </article>
     </div>
-    <div class="w-1/3">
-      <aside class="bg-white rounded-lg p-4 flex">
-        <div class="pr-4">
-          <img
-            class="w-12 h-12 rounded-full"
-            src="https://jessesibley.com/assets/static/memoji.bd6740a.b798404f3509569fa21b6787c936804b.jpg"
-          />
-        </div>
-        <div class="leading-tight">
-          <h2 class="text-xl font-medium">Jesse Sibley</h2>
-          <p class="text-sm text-gray-600">Web Developer</p>
-        </div>
-      </aside>
-    </div>
+    <div class="w-full sm:w-1/3 mt-4 sm:mt-0"></div>
   </main>
 </template>
 
