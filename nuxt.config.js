@@ -87,7 +87,15 @@ export default {
    * purgeCSS
    */
   purgeCSS: {
-    whitelistPatterns: [/vts-modal/, /fade/, /slide/, /Cookie/, /bg-/, /text-/ /px-/]
+    whitelistPatterns: [
+      /vts-modal/,
+      /fade/,
+      /slide/,
+      /Cookie/,
+      /bg-/,
+      /text-/,
+      /px/
+    ]
   },
   /*
    ** Build configuration

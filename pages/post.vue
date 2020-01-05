@@ -9,6 +9,9 @@
         </header>
         <section class="mb-4">
           <p>{{ post && post.content }}</p>
+          <div>
+            <Tag v-for="tag in post.tags" />
+          </div>
         </section>
         <footer class="border-t pt-4">
           <div class="flex items-center">
@@ -30,7 +33,12 @@
 </template>
 
 <script>
+import Tag from '@/components/Tag'
+
 export default {
+  components: {
+    Tag
+  },
   data() {
     return {
       post: null
