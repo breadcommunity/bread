@@ -20,7 +20,10 @@
             {{ post.content }}
           </p>
           <div class="inline-flex items-center mt-1">
-            <Tag v-for="tag in post.tags" :label="tag" />
+            <span v-for="tag in post.tags" :key="tag">
+              <Tag :label="tag" />
+            </span>
+            <LinkPreview :url="post.link" v-if="post.link" />
           </div>
         </nuxt-link>
       </li>
@@ -30,11 +33,13 @@
 
 <script>
 import { HeartIcon } from 'vue-feather-icons'
+import LinkPreview from '@/components/LinkPreview'
 import Tag from '@/components/Tag'
 
 export default {
   components: {
     HeartIcon,
+    LinkPreview,
     Tag
   },
   props: {

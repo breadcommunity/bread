@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <nuxt />
+    <nuxt class="min-height" />
     <Footer />
     <client-only>
       <CookieLaw />
@@ -34,3 +34,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.min-height {
+  min-height: 80vh;
+}
+</style>

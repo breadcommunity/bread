@@ -9,8 +9,8 @@
         </header>
         <section class="mb-4">
           <p>{{ post && post.content }}</p>
-          <div>
-            <Tag v-for="tag in post.tags" />
+          <div class="mt-4">
+            <Tag :key="tag" v-for="tag in post.tags" :label="tag" />
           </div>
         </section>
         <footer class="border-t pt-4">
