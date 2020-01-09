@@ -75,13 +75,7 @@ export default {
 
 .modal .vts-modal__content {
   transition: transform 0.2s;
-  @apply relative p-4 w-full max-w-full min-h-screen;
-}
-
-@media (min-width: 640px) {
-  .modal .vts-modal__content {
-    @apply h-auto max-w-xl min-h-0 rounded-lg !important;
-  }
+  @apply relative p-4 w-4/5 max-w-xl rounded-lg;
 }
 
 .fade-enter .vts-modal__content,

@@ -80,7 +80,7 @@ import TextInput from '@/components/Form/TextInput'
 import Button from '@/components/Button'
 
 export default {
-  layout: 'simple',
+  layout: 'signup',
   components: {
     TextInput,
     Button

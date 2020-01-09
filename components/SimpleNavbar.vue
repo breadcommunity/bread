@@ -6,6 +6,9 @@
       <nuxt-link to="/">
         <Logo />
       </nuxt-link>
+      <nuxt-link to="/signup" class="underline">
+        Sign Up
+      </nuxt-link>
     </div>
   </nav>
 </template>

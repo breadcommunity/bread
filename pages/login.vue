@@ -49,10 +49,6 @@
           <nuxt-link to="/signup" class="underline"
             >Forgotten your password?</nuxt-link
           >
-          <span class="block my-2">OR</span>
-          <nuxt-link to="/signup" class="underline font-medium"
-            ><Button variant="secondary">Sign up here</Button></nuxt-link
-          >
         </p>
       </div>
     </div>
@@ -64,7 +60,7 @@ import TextInput from '@/components/Form/TextInput'
 import Button from '@/components/Button'
 
 export default {
-  layout: 'simple',
+  layout: 'login',
   components: {
     TextInput,
     Button
